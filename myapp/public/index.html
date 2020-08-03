@@ -2,177 +2,160 @@
 <html lang="en">
 
 <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Grayscale - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-                rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="stylesheets/styles.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Grayscale - Start Bootstrap Theme</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="stylesheets/styles.css" rel="stylesheet" />
 </head>
 
 <body id="page-top" onload="ajaxplanets();">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-                <div class="container">
-                        <a class="navbar-brand js-scroll-trigger" href="#page-top">Prueba Api</a>
-                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                                aria-label="Toggle navigation">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Prueba Api</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                                 Menu
                                 <i class="fas fa-bars"></i>
                         </button>
-                </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-                <div class="container d-flex h-100 align-items-center">
-                        <div class="mx-auto text-center">
-                                <h1 class="mx-auto my-0 text-uppercase">Api y otras peticiones</h1>
-                                <h2 class="text-white-50 mx-auto mt-2 mb-5">pruebas con node.js</h2>
-                        </div>
-                </div>
-
-        </header>
-        <div class="bg-black ">
-                <div class="card mb-5 align-items-center bg-black">
-
-                        <div class="card-body bg-black">
-                                <div class="mx-auto text-center">
-                                        <h1 class="mx-auto my-0 text-uppercase">Planetas</h1>
-                                        <h2 class="text-white-50 mx-auto mt-2 mb-5">muestra las personas que habitan en
-                                                cada planeta</h2>
-                                </div>
-                                <table class="table mb-5 table-dark">
-                                        <thead>
-                                                <tr>
-                                                        <th scope="col">mundo</th>
-                                                </tr>
-                                        </thead>
-                                        <tbody id="lista">
-                                        </tbody>
-                                </table>
-                                <div id="lista2" class="text-white-50">
-                                        <p>Las personas que viven ahí son: <br></p>
-                                </div>
-                        </div>
-                </div>
-
-                <div class="card align-items-center bg-black text-white-50">
-
-                        <div class="card-body bg-black">
-                                <form class="needs-validation" novalidate>
-                                        <div class="form-row">
-                                                <div class="col-md-6 mb-3">
-                                                        <label for="validationTooltip01">First name</label>
-                                                        <input type="text" class="form-control" id="validationTooltip01"
-                                                                value="Mark" required>
-                                                        <div class="valid-tooltip">
-                                                                Looks good!
-                                                        </div>
-                                                </div>
-                                                <div class="col-md-6 mb-3">
-                                                        <label for="validationTooltip02">Last name</label>
-                                                        <input type="text" class="form-control" id="validationTooltip02"
-                                                                value="Otto" required>
-                                                        <div class="valid-tooltip">
-                                                                Looks good!
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <div class="form-row">
-                                                <div class="col-md-6 mb-3">
-                                                        <label for="validationTooltip03">City</label>
-                                                        <input type="text" class="form-control" id="validationTooltip03"
-                                                                required>
-                                                        <div class="invalid-tooltip">
-                                                                Please provide a valid city.
-                                                        </div>
-                                                </div>
-                                                <div class="col-md-3 mb-3">
-                                                        <label for="validationTooltip04">State</label>
-                                                        <select class="custom-select" id="validationTooltip04" required>
-                                                                <option selected disabled value="">Choose...</option>
-                                                                <option>...</option>
-                                                        </select>
-                                                        <div class="invalid-tooltip">
-                                                                Please select a valid state.
-                                                        </div>
-                                                </div>
-                                                <div class="col-md-3 mb-3">
-                                                        <label for="validationTooltip05">Zip</label>
-                                                        <input type="text" class="form-control" id="validationTooltip05"
-                                                                required>
-                                                        <div class="invalid-tooltip">
-                                                                Please provide a valid zip.
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <button class="btn btn-primary" type="submit">Submit form</button>
-                                </form>
-                        </div>
-                </div>
-
         </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container d-flex h-100 align-items-center">
+            <div class="mx-auto text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Api y otras peticiones</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">pruebas con node.js</h2>
+            </div>
+        </div>
+
+    </header>
+    <div class="bg-black ">
         <div class="card mb-5 align-items-center bg-black">
 
-                <div class="card-body bg-black">
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Mostrar registros</h2>
-                        <a id="planetas" onclick="ajaxplanets();" class="btn btn-primary js-scroll-trigger">Ver</a>
+            <div class="card-body bg-black">
+                <div class="mx-auto text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">Planetas</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">muestra las personas que habitan en cada planeta</h2>
                 </div>
+                <table class="table mb-5 table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">mundo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista">
+                    </tbody>
+                </table>
+                <div id="lista2" class="text-white-50">
+                    <p>Las personas que viven ahí son: <br></p>
+                </div>
+            </div>
         </div>
 
-        <!-- Footer-->
-        <footer class="footer bg-black small text-center text-white-50">
-                <div class="container">Copyright © Your Website 2020</div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="javascripts/js.js"></script>
-        <script src="javascripts/scripts.js"></script>
-        <script src="javascripts/conexion.js"></script>
+        <div class="card align-items-center bg-black text-white-50">
 
-        <script>
-                function ajaxplanets() {
-                        $.ajax({
-                                url: "https://swapi.dev/api/planets/", success: function (result) {
-                                        for (var i = result.results.length - 1; i >= 0; i--) {
+            <div class="card-body bg-black">
+                <form class="needs-validation" method="POST" action="/add" novalidate>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationTooltip01">Nombre</label>
+                            <input type="text" class="form-control" id="validationTooltip01" value="Mark" name="name" equired>
+                            <div class="valid-tooltip">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationTooltip02">Last name</label>
+                            <input type="text" class="form-control" id="validationTooltip02" value="Otto" name="lastname" required>
+                            <div class="valid-tooltip">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationTooltip02">Email</label>
+                            <input type="email" class="form-control" id="validationTooltip02" value="Otto" name="email" required>
+                            <div class="valid-tooltip">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationTooltip02">Password</label>
+                            <input type="password" class="form-control" id="validationTooltip02" value="Otto" name="password" required>
+                            <div class="valid-tooltip">
+                                Looks good!
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </form>
+            </div>
+        </div>
 
-                                                $("#lista").append(' <tr><th  onclick="ajaxhumans(\'' + result.results[i].url + '\');">' + result.results[i].name + "</th>  </tr>");
-                                        }
+    </div>
+    <div class="card mb-5 align-items-center bg-black">
 
-                                }
-                        });
+        <div class="card-body bg-black">
+            <h2 class="text-white-50 mx-auto mt-2 mb-5">Mostrar registros</h2>
+            <a id="planetas" onclick="ajaxplanets();" class="btn btn-primary js-scroll-trigger">Ver</a>
+        </div>
+    </div>
 
+    <!-- Footer-->
+    <footer class="footer bg-black small text-center text-white-50">
+        <div class="container">Copyright © Your Website 2020</div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="javascripts/js.js"></script>
+    <script src="javascripts/scripts.js"></script>
+    <script src="javascripts/conexion.js"></script>
+
+    <script>
+        function ajaxplanets() {
+            $.ajax({
+                url: "https://swapi.dev/api/planets/",
+                success: function(result) {
+                    for (var i = result.results.length - 1; i >= 0; i--) {
+
+                        $("#lista").append(' <tr><th  onclick="ajaxhumans(\'' + result.results[i].url + '\');">' + result.results[i].name + "</th>  </tr>");
+                    }
 
                 }
-                function ajaxhumans(planeturl) {
-                        $.ajax({
-                                url: "https://swapi.dev/api/people/", success: function (result) {
-                                        for (var i = result.results.length - 1; i >= 0; i--) {
-                                                console.log("coso", result.results[i].homeworld, planeturl);
+            });
 
-                                                if (result.results[i].homeworld === planeturl)
-                                                        $("#lista2").append('<a>' + result.results[i].name + "</a>");
 
-                                        }
+        }
 
-                                }
-                        });
+        function ajaxhumans(planeturl) {
+            $.ajax({
+                url: "https://swapi.dev/api/people/",
+                success: function(result) {
+                    for (var i = result.results.length - 1; i >= 0; i--) {
+                        console.log("coso", result.results[i].homeworld, planeturl);
+
+                        if (result.results[i].homeworld === planeturl)
+                            $("#lista2").append('<a>' + result.results[i].name + "</a>");
+
+                    }
 
                 }
-        </script>
+            });
+
+        }
+    </script>
 </body>
 
 </html>
